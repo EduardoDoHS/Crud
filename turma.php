@@ -46,7 +46,9 @@
             </tr>
         </thead>
         <tbody>
-            
+            <?php
+                include("listar_turmas.php");
+            ?>
         </tbody>
     </table>
 </body>
