@@ -1,5 +1,5 @@
 <?php
-    require_once("verificar_sessao.php");
+    require_once("bd.php");
 
     $codigo = $_GET['codigo'];
 

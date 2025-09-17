@@ -1,5 +1,5 @@
 <?php
-// conexao.php
+//conexao.php
 // Conexão simples ao MySQL usando mysqli (XAMPP). Ajuste usuário/senha se necessário.
 
 $host     = "localhost";
