@@ -33,8 +33,8 @@ if (!isset($_SESSION["conectado"]) || $_SESSION["conectado"] != true) {
 
         <br>
 
-        <a href="cadastrar.php">
-            <input type="button" value="cadastrar" event="cadastrar.php">
+        <a href="cadastrar_turma.php">
+            <input type="button" value="cadastrar">
         </a>
 
         <br>

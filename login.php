@@ -3,12 +3,11 @@ require "bd.php";
 
 /*
 echo "<pre>";
-print_r($conn);
 var_dump($conn);
 echo "</pre>";
+*/
 
-echo "<br><br>";
-
+/*
 echo "<pre>";
 var_dump($_SERVER);
 echo "</pre>";
@@ -17,6 +16,12 @@ echo "<br><br>";
 
 echo "<pre>";
 var_dump($_POST);
+echo "</pre>";
+
+echo "<br><br>";
+
+echo "<pre>";
+var_dump($_SESSION);
 echo "</pre>";
 */
 

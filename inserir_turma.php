@@ -1,29 +1,20 @@
 <?php
-    require_once("bd.php");
+    require_once('bd.php');
 
     session_start();
 
-    $nome = $_POST ['nomeTurma'] ?? '';
+    $nome = $_POST['nomeTurma'] ?? '';
 
-    $stmt = $conn->prepare(""INSERT INTO turma (nome_turma, fk_professor) VALUES (?, ?)"");
+    $stmt = $conn->prepare("INSERT INTO turma (nome_turma, fk_professor) VALUES (?, ?)");
+    $stmt->bind_param("si", $nome, $_SESSION['professor_id']);
 
-    if ($stmt) {
-        $stmt->bind_param("si", $nome, $_SESSION['professor_id']);
-
-        if ($stmt->execute()) {
-
-            header("Location: turma.php");
-            exit;
-
-        } else {
-
-            echo "Erro ao inserir: " . $stmt->error;
-        }
-
-        $stmt->close();
+    if($stmt->execute()) {
+        header("Location: turma.php");
+        exit;
     } else {
-        echo "Erro na preparação do statment: " . $conn->error;
-    }  
-    
+        echo "Erro ao inserir: " . $stmt->error;
+    }
+
+    $stmt->close();
     $conn->close();
 ?>
